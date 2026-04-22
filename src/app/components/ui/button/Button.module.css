@@ -1,0 +1,20 @@
+.btn {
+  font-size: clamp(var(--fs-p-min), 1vw + 0.25rem, var(--fs-p-max));
+  align-items: center;
+}
+
+.primary {
+  padding: var(--space-sm) var(--space-md);
+  color: white;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.primary:hover {
+  background-color: var(--color-secondary);
+  box-shadow: 1px 1px 5px gray;
+  transform: scale(1.1);
+}

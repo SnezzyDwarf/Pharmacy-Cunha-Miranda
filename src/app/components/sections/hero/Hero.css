@@ -1,6 +1,7 @@
 .section_hero {
   width: 100%;
   height: auto;
+  margin-top: 80px;
 }
 
 .hero_content {

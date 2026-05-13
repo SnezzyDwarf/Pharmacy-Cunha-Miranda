@@ -10,7 +10,19 @@ import Logo from "../../../../assets/images/LOGO.png";
 export default function Navbar() {
   //state active page for css
   const [active, setActive] = useState("begin");
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleClick = (section) => {
+    setActive(section);
+
+    const el = document.getElementById(section);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 100);
+  };
   return (
     <>
       <section className="section_navbar">
@@ -21,13 +33,24 @@ export default function Navbar() {
             <h3>Farmácia Cunha Miranda</h3>
           </div>
 
+          <div
+            className={`navbar_mobile-toggle ${isOpen ? "active" : ""}`}
+            onClick={() => setIsOpen((prev) => !prev)}
+          >
+            <Button>
+              <span></span>
+              <span></span>
+              <span></span>
+            </Button>
+          </div>
+
           {/*right side*/}
-          <div className="navbar_right-wrapper">
+          <div className={`navbar_right-wrapper ${isOpen ? `open` : ``}`}>
             <div className="navbar_right-wrapper_links">
               <ul>
                 <li>
                   <a
-                    onClick={() => setActive("begin")}
+                    onClick={() => handleClick("begin")}
                     href="#begin"
                     className={
                       active === "begin" ? "link_clicked" : "not_cliked"
@@ -38,7 +61,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a
-                    onClick={() => setActive("team")}
+                    onClick={() => handleClick("team")}
                     className={
                       active === "team" ? "link_clicked" : "not_cliked"
                     }
@@ -49,7 +72,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a
-                    onClick={() => setActive("services")}
+                    onClick={() => handleClick("services")}
                     className={
                       active === "services" ? "link_clicked" : "not_cliked"
                     }
@@ -60,7 +83,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a
-                    onClick={() => setActive("local")}
+                    onClick={() => handleClick("local")}
                     className={
                       active === "local" ? "link_clicked" : "not_cliked"
                     }
@@ -72,8 +95,12 @@ export default function Navbar() {
               </ul>
             </div>
             <div className="navbar_right-wrapper_cta">
-              <Button to="">Ligar</Button>
-              <Button variant="primary">Contactos</Button>
+              <Button>
+                <a href="#contacts">Ligar</a>
+              </Button>
+              <Button variant="primary">
+                <a href="#contacts">Contactos</a>
+              </Button>
             </div>
           </div>
         </nav>

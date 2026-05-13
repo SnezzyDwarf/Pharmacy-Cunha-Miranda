@@ -95,7 +95,7 @@ p {
 :root {
   --color-primary: #009866; /* BASE */
   --color-secondary: #00bc7d; /* SUPPORT */
-  --color-tertiary: #dafbea; /* DETAILS */
+  --color-tertiary: #edfdf4; /* DETAILS */
   --color-neutral: #556873; /* TITLES/SUBTITLES*/
   --color-text: #1e2939;
   /*===text====*/

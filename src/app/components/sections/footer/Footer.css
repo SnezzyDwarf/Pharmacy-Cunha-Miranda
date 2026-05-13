@@ -1,0 +1,124 @@
+.section_footer {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-primary);
+}
+
+.footer_content {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+}
+
+.footer_content-up {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.footer_content-up_left {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.footer_content-up_left-wrapprer_imagem {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.footer_content-up_left-wrapprer_imagem img {
+  width: 30%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer_content-up_left-wrapprer_imagem p {
+  color: white;
+}
+
+.footer_content-up_left-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+
+.footer_content-up_left-text p {
+  font-size: 0.7rem;
+}
+
+.footer_content-up_mid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.footer_content-up_right {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  gap: var(--space-sm);
+}
+
+.footer_content-up_right > div p {
+  font-size: 0.8rem;
+}
+
+.footer_content-down {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.footer_content-down::after {
+  content: "";
+  width: 80%;
+  height: 1.5px;
+  position: absolute;
+  top: -15px;
+  background-color: white;
+}
+
+.footer_content-down > div p {
+  color: white;
+}
+
+@media (max-width: 728px) {
+  .footer_content-up {
+    flex-direction: column;
+    align-items: start;
+  }
+  .footer_content-up_left {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .footer_content-up_mid {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

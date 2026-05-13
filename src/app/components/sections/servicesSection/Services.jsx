@@ -10,7 +10,7 @@ import Prepared from "../../../../assets/ui/Prepared";
 export default function Services() {
   return (
     <>
-      <section className="services_section">
+      <section id="services" className="services_section">
         <div className="services_content">
           <div className="services_content-text">
             <h2>Serviços</h2>
@@ -22,7 +22,7 @@ export default function Services() {
           <div className="services_content-grid">
             <div>
               <Box
-                image={<BandageIcon size={70} />}
+                image={<BandageIcon size={60} />}
                 title="Medicamentos"
                 variant="secondary"
               >
@@ -34,7 +34,7 @@ export default function Services() {
             </div>
             <div>
               <Box
-                image={<Stethoscope size={70} />}
+                image={<Stethoscope size={60} />}
                 title="Aconselhamento Farmacêutico"
                 variant="secondary"
               >
@@ -43,7 +43,7 @@ export default function Services() {
             </div>
             <div>
               <Box
-                image={<BandageIcon size={70} />}
+                image={<BandageIcon size={60} />}
                 title="Exames de Rotina"
                 variant="secondary"
               >
@@ -52,7 +52,7 @@ export default function Services() {
             </div>
             <div>
               <Box
-                image={<BottleIcon size={70} />}
+                image={<BottleIcon size={60} />}
                 title="Dermocosméticos"
                 variant="secondary"
               >
@@ -63,7 +63,7 @@ export default function Services() {
             </div>
             <div>
               <Box
-                image={<Prepared size={70} />}
+                image={<Prepared size={60} />}
                 title="Preparação de Medicamentos"
                 variant="secondary"
               >
@@ -73,7 +73,7 @@ export default function Services() {
             <div>
               <Box
                 title="Testes Rápidos"
-                image={<TestIcon size={70} />}
+                image={<TestIcon size={60} />}
                 variant="secondary"
               >
                 <p>Testes de diagnóstico rápido e análises clínicas</p>
